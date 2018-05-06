@@ -1,31 +1,15 @@
-package com.mlxc.entity;
+package com.mlxc.utils;
 
-import javax.persistence.*;
+public class BuyRecord {
 
-@Entity
-@Table(name="commodity")
-public class Commodity {
-
-    private long commodityId;
     private String commodityName;
     private double price;
     private int rest;
-    private long userid;
     private String imageURL;
     private String des;
+    private int num;
 
-    public Commodity() {
-
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public long getCommodityId() {
-        return commodityId;
-    }
-
-    public void setCommodityId(long commodityId) {
-        this.commodityId = commodityId;
+    public BuyRecord() {
     }
 
     public String getCommodityName() {
@@ -52,14 +36,6 @@ public class Commodity {
         this.rest = rest;
     }
 
-    public long getUserid() {
-        return userid;
-    }
-
-    public void setUserid(long userid) {
-        this.userid = userid;
-    }
-
     public String getImageURL() {
         return imageURL;
     }
@@ -74,5 +50,13 @@ public class Commodity {
 
     public void setDes(String des) {
         this.des = des;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
     }
 }

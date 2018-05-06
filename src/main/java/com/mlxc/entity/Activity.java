@@ -10,6 +10,7 @@ public class Activity {
     private String activityName;
     private String des;
     private int numLimit;
+    private int currentNum;
 
     public Activity() {
 
@@ -47,5 +48,13 @@ public class Activity {
 
     public void setNumLimit(int numLimit) {
         this.numLimit = numLimit;
+    }
+
+    public int getCurrentNum() {
+        return currentNum;
+    }
+
+    public void setCurrentNum(int currentNum) {
+        this.currentNum = currentNum;
     }
 }

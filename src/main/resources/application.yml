@@ -6,6 +6,10 @@ spring:
     username: root
     password: 27963608
     driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
   thymeleaf:
     prefix: classpath:/templates/

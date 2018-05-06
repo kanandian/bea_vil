@@ -1,30 +1,17 @@
-package com.mlxc.entity;
+package com.mlxc.parammodel;
 
-import javax.persistence.*;
+import com.mlxc.entity.User;
 
-@Entity
-@Table(name = "user")
-public class User {
-    private long userId;
+public class RegisterModel {
+
     private String userName;
-    private String name;
     private String password;
+    private String name;
     private String id;
     private int userType;
-    private double balance;
 
-    public User() {
 
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
+    public RegisterModel() {
     }
 
     public String getUserName() {
@@ -35,20 +22,20 @@ public class User {
         this.userName = userName;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getId() {
@@ -67,11 +54,16 @@ public class User {
         this.userType = userType;
     }
 
-    public double getBalance() {
-        return balance;
+    public User createUser() {
+        User user = new User();
+
+        user.setName(this.getName());
+        user.setPassword(this.getPassword());
+        user.setId(this.getId());
+        user.setUserName(this.getUserName());
+        user.setUserType(this.getUserType());
+
+        return user;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
 }

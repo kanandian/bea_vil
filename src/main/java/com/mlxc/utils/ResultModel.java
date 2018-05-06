@@ -8,6 +8,7 @@ public class ResultModel {
 
     private int errcode;
     private String errmsg;
+    private Object data;
 
     public ResultModel() {
 
@@ -27,5 +28,13 @@ public class ResultModel {
 
     public void setErrmsg(String errmsg) {
         this.errmsg = errmsg;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
     }
 }
